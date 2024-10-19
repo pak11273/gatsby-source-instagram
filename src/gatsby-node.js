@@ -21,7 +21,7 @@ exports.sourceNodes = async (
   const data = await getInstagramPosts(params)
 
   // loop through data and create Gatsby nodes
-  data.forEach((post) =>
+  data?.forEach?.((post) =>
     createNode({
       ...post,
       id: createNodeId(`${POST_NODE_TYPE}-${post.id}`),
